@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
+
         <link rel="stylesheet" href="../common.css">
-        
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        
+
         <title>YOKABIO2018</title>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
+
         <script>
           $(function() {
             var $win = $(window),
@@ -34,22 +34,22 @@
             });
           });
         </script>
-        
+
     </head>
-    
+
     <body>
         <!--↓トップに戻るボタン↓-->
         <div id="page_top">
             <i class="fas fa-angle-double-up fa-2x faa-bounce animated-hover top-bottom"></i>
             <a href="#"></a></div>
         <!--↑トップに戻るボタン↑-->
-        
+
         <!--↓変更するのはここから↓-->
         <!--↓ナビゲーションバー(メイン)↓-->
         <header>
             <ul>
                 <!--このファイルのaタグにclass="current"を追加して下さい-->
-                <li><a href="../Home/Home.html">Home</a></li>
+                <li><a href="../../Index.html">Home</a></li>
                 <li><a href="../Idea/Idea.html">Idea</a></li>
                 <li><a href="../Simulation/Simulation.html">Simulation</a></li>
                 <li><a class="current" href="../DNADesign/DNADesign.html">DNA Design</a></li>
@@ -59,7 +59,7 @@
             </ul>
         </header>
         <!--↑ナビゲーションバー(メイン)↑-->
-        
+
         <!--↓ナビゲーションバー(サブ)↓-->
         <nav>
             <ul>
@@ -69,7 +69,7 @@
             </ul>
         </nav>
         <!--↑ナビゲーションバー(サブ)↑-->
-        
+
         <main class="container">
             <!--section1とsection2は交互に書いて下さい-->
             <!--section1,section2の直前に,
@@ -120,24 +120,24 @@
                     &nbsp;&nbsp;If we implement the feedback regulator, we are able to keep level of ATP.<br>
                     &nbsp;&nbsp;In addtion to, the scope of application will be wider.<br><br>
                 </p>
-                
+
                 <p> A purpose of our project is to not adversely affect to normal cells. So, we implemented the ON-OFF switch in this time.<br>
                     Thereby when cancer cells die, the circuits in normal cells is turned off by the ON-OFF switch.<br>
                     Thus it do not load more than necessary. A scheme of ON-OFF switch circuit is shown in Figure 4.<br><br>
                 </p>
                 Figure 4<br><br>
-                
+
                 <p> We designed the ON-OFF switch based on strand displacement reactions.<br>
                     This gate was composed of four DNA strand displacement reaction processes.<br>
                     Each of these reaction processes is explained below.<br><br>
-                
+
                     First Process:<br>
                     First, the circuit starts by administering Input.<br>
                     In the first process, we aimed to make the models of Signal1 and Signal2<br>
                     using a strand displacement reaction(Figure 5,Figure 6).<br>
                     Thereby Signal1 output and singl stranded DCC cause hybridization and they change double stranded.<br>
                     In other words, DCC is changed ON state into OFF state.<br><br>
-                    
+
                     &nbsp;&nbsp;&#9312;&nbsp;T0* of Gate1 is bound with T0 of Input.<br>
                     &nbsp;&nbsp;&#9313;&nbsp;Gate1 and Input are effectively combined.<br>
                     &nbsp;&nbsp;&#9314;&nbsp;A part of Gage1 separates from the complex.<br>
@@ -148,13 +148,13 @@
                 Figure 5<br><br><br>
                 <img src="Image/1/T7Promoter(OFF)&Signal1.gif" width="30%" height="auto"><br>
                 Figure 6<br><br>
-                    
+
                 <p> Second Process:<br>
                     In the second process, we control a reacion by a gate of threshold value.<br>
                     A threshold value is decided by Threshold. Moreover, Signal2 and Threshold meet and cause<br>
                     a strand displacement reaction and then Signal2 disappear.<br>
                     In other words, we need Signal2 which over a concentration of Threshold to advance a reaction(Figure 7).<br><br>
-                    
+
                     &nbsp;&nbsp;&#9312;&nbsp;T3* of Threshold is bound with T3 of Signal2.<br>
                     &nbsp;&nbsp;&#9313;&nbsp;Thresold and Signal2 are effectively combined.<br>
                     &nbsp;&nbsp;&#9314;&nbsp;A part of Waste and Fuel separates from the complex.<br>
@@ -165,7 +165,7 @@
                 <p> Signal2 which over a concentration of Threshold goes Third process,<br>
                     and Fule which made in this process is used in Third process.<br><br>
                 </p>
-                
+
                 <p> Third Process:<br>
                     In the third process, we perform processing by chain reaction of strand displacement reaction<br>
                     called seesaw gate(Figure 8,Figure 9).<br><br>
@@ -174,13 +174,13 @@
                     &nbsp;&nbsp;&#9313;&nbsp;&nbsp;Gate2 and Signal2 are effectively combined.<br>
                     &nbsp;&nbsp;&#9314;&nbsp;&nbsp;A part of Releaser and Gate3 separates from the complex.<br>
                     &nbsp;&nbsp;&#9315;&nbsp;&nbsp;Releaser and Gate3 are genarated by separating the conponents.<br><br>
-                
+
                     Gate2 which made in previous steps causes a strand displacement reaction with Fuel, and Signal2 is made again.<br><br>
                     &nbsp;&nbsp;&#9312;'&nbsp;T2* of Fule is bound with T2 of Gate3.<br>
                     &nbsp;&nbsp;&#9313;'&nbsp;Fuel and Gate3 are effectively combined.<br>
                     &nbsp;&nbsp;&#9314;'&nbsp;A part of Signal2 and Gate4 separates from the complex.<br>
                     &nbsp;&nbsp;&#9315;'&nbsp;Signal2 and Gate4 are genarated by separating the conponents.<br><br>
-                    
+
                     The cycle such as this is called seesaw gate. Furthermore, it refills Signal2 which is consumed in Second process<br>
                     and outputs Releaser.<br>
                     As described above, Threshold and seesaw gate are used to adjust time between ON and OFF of DCC.<br><br>
@@ -191,12 +191,12 @@
                 Figure 9<br><br>
                 <p>
                 </p>
-                
+
                 <p> Final Process:<br>
                     In the final process, we aimed to change double stranded DCC into single stranded DCC<br>
                     by dissociating Signal1 from double stranded DCC.<br>
                     In other words, we aimed to swich a state of the circuit ON state to Off state(Figure 10).<br><br>
-                    
+
                     &nbsp;&nbsp;&#9312;&nbsp;T1 of DCC(ON) is bound with T1* of Releaser.<br>
                     &nbsp;&nbsp;&#9313;&nbsp;DCC(ON) and Releaser are effectively combined.<br>
                     &nbsp;&nbsp;&#9314;&nbsp;A part of DCC(ON) separates from the complex(It is Signal1).<br>
@@ -204,10 +204,10 @@
                 </p>
                 <img src="Image/4/T7Promoter(ON)&Releaser.gif" width="70%" height="auto"><br>
                 Figure 10<br><br><br>
-                
+
                 <p> According to previous four processes, we are able to switch a state of the circuit(<b>OFF → ON → OFF</b>)<br>
                     by once administering Input.<br><br>
-                    
+
                     However, Figure 4 has two ploblems.<br>
                     First, the circuit causes an undesired reaction when it starts.<br>
                     For instans, we explain about Input and DCC(OFF) here.<br>
@@ -219,20 +219,20 @@
                     &nbsp;&nbsp;&#9312;&nbsp;Input binds with DCC(OFF)<br>
                     &nbsp;&nbsp;&#9313;&nbsp;Signal1 binds with Signal2<br>
                     &nbsp;&nbsp;&#9314;&nbsp;Input binds with Gate2<br><br>
-                    
+
                     Second, some double stranded DNA make T7RNA promoter<br>
                     and happen polymerase reaction without switch ON state(Figure 11).<br>
                 </p>
                 Figure 11<br><br>
-                
+
                 <p> Therefore, We used <b>mismatched base pair</b> to solve these problems.<br></p>
-                
+
                 <h2>What is mismatch</h2>
                 <p> A&amp;T and C&amp;G in DNA base are held each other by hydrogen-bonding which is so-called Watson-Crick base pair,<br>
                     but other than that it is reported that there are other combinations (e.g. A and G ).<br>
                     We call this <b>Mismatched base pair</b>.<br>
                 </p>
-                
+
                 <h2>Use of mismatch</h2>
                 <p>
                 </p>
@@ -241,67 +241,67 @@
                 <p> We improved the circuit of Figure xx into Figure xx using this character.<br>
                 </p>
                 Figure xx<br><br>
-                
+
                 <p> In this project, we added mismatched base pair four times and added (m1)(m2)(m3)(m4) precedes the domain name.<br>
                     We will show NUPACK's evaluation about each parts of point added mismatched base pair below.<br>
                 </p>
-                
+
                 <p><b>(m1)Input&nbsp;&amp;&nbsp;DCC(OFF)</b><br>
                     As previously stated, Input and DCC(OFF) are complementary, so they cause hybridization.<br>
                     We added mismatched base pair here(Figure xx). Its result of NUPACK is shown in Figure xx.<br>
                     red characters show desired reactions(The same hereinafter).<br><br>
                 </p>
-                
+
                 Figure xx<br><br>
-                
+
                 <img src="Image/(m1)NUPACK.png" width="70%" height="auto"><br>
                 Figure xx<br><br>
-                
+
                 <p><b>(m2)Signal1&nbsp;&amp;&nbsp;Signal2</b><br>
                     Similarly, Signal1 and Signal2 are complementary, so they cause hybridization.<br>
                     They shold be completely complementary, unlike (m1).<br>
                     We added mismatched base pair to Signal1 is bound with DCC(Figure xx).<br>
                     A result of NUPACK is shown in Figure xx.<br><br>
                 </p>
-                
+
                 Figure xx<br>
-                
+
                 <img src="Image/(m2)NUPACK.png" width="70%" height="auto"><br>
                 Figure xx<br>
-                
+
                 <p><b>(m3)Input&nbsp;&amp;&nbsp;Gate2</b><br>
                     We also added mismatched base pair Input and Gate2 because it start a reaction from T3 which is toehold(Figure xx).<br>
                 </p>
                 <img src="Image/(m3)mismatch.png" width="30%" height="auto"><br>
                 Figure xx<br><br>
-                
+
                 <p><b>(m4)Gate2</b><br>
                     Polymerase reaction is happened because Gate2 includes T7 promoter sequence.<br>
                     We also added mismatched base pair here to not T7RNA polymerase recognize T7 promoter sequence(Figure xx).<br><br>
                 </p>
                 <img src="Image/(m4)mismatch.png" width="50%" height="auto"><br>
                 Figure xx<br><br>
-                
+
                 <p> A new scheme which is added mismatched base pair is shown in Figure XX.<br>
                     It is expected that to reduce undesired reactions.<br>
                 </p>
-                
+
                 Figure xx<br><br>
-                
+
                 <p> NUPACK's evaluation of bonding strength of double stranded DNA whitch is added mismatched base pair<br>
                     is shown in Figure xx.<br>
                     It includes mismatched base pair of G-T bounding however, we are able to ascertain that bouding power is kept strong.<br>
                     In additon to, T7RNA promoter is disappeared without switch ON state by adding mismatched base pair<br>
                     and these problems are solved(Figuer xx).<br>
                 </p>
-                
+
                 Figure xx<br><br>
-                
+
                 Figure xx<br><br>
             </div>
         </main>
         <!--↑変更するのはここまで↑-->
-        
+
         <footer>
             <p>&copy;YOKABIO 2018</p>
         </footer>
