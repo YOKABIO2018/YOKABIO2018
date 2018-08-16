@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../common.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <title>YOKABIO2018</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    $(function() {
+      var $win = $(window),
+        $main = $('main'),
+        $nav = $('nav'),
+        navHeight = $nav.outerHeight(),
+        navPos = $nav.offset().top,
+        fixedClass = 'is-fixed';
+
+      $win.on('load scroll', function() {
+        var value = $(this).scrollTop();
+        if (value > navPos) {
+          $nav.addClass(fixedClass);
+          $main.css('margin-top', navHeight);
+        } else {
+          $nav.removeClass(fixedClass);
+          $main.css('margin-top', '0');
+        }
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--↓トップに戻るボタン↓-->
+  <div id="page_top">
+    <i class="fas fa-angle-double-up fa-2x faa-bounce animated-hover top-bottom"></i>
+    <a href="#"></a></div>
+  <!--↑トップに戻るボタン↑-->
+
+  <!--↓変更するのはここから↓-->
+  <!--↓ナビゲーションバー(メイン)↓-->
+  <header>
+    <ul>
+      <!--このファイルのaタグにclass="current"を追加して下さい-->
+      <li><a href="../Home/Home.html">Home</a></li>
+      <li><a href="../Idea/Idea.html">Idea</a></li>
+      <li><a class="current" href="../Simulation/Simulation.html">Simulation</a></li>
+      <li><a href="../DNADesign/DNADesign.html">DNA Design</a></li>
+      <li><a href="../Experiment/Experiment.html">Experiment</a></li>
+      <li><a href="../Discussion/Discussion.html">Discussion</a></li>
+      <li><a href="../Team/Team.html">Team</a></li>
+    </ul>
+  </header>
+  <!--↑ナビゲーションバー(メイン)↑-->
+
+  <!--↓ナビゲーションバー(サブ)↓-->
+  <nav>
+    <ul>
+      <!--hrefをサブタイトルに変更して下さい-->
+      <!--liの数は必要に応じて変更して下さい-->
+      <li><a href="#subA">About ATP</a></li>
+      <li><a href="#subB">Kholodenko-Simulation</a></li>
+      <li><a href="#subC">e.coli-Simulation</a></li>
+    </ul>
+  </nav>
+  <!--↑ナビゲーションバー(サブ)↑-->
+
+  <main class="container">
+    <!--section1とsection2は交互に書いて下さい-->
+    <!--section1,section2の直前に,
+                <div class="space" id="subX"></div>
+                idはsectionではなく,直前のspaceのクラスに追加して下さい
+                divタグの内部では,h1,h2,pタグのみ使用して下さい
+                img,videoタグを使用するときは,pタグの外で使用して下さい
+            -->
+    <div class="space" id="subA"></div>
+    <div class="section1">
+      <h1> About ATP </h1>
+      <p>ATP ( アデノシン三 リン酸 ) はアデニン ( 塩基 ) とリボース ( 糖 ) に３つのリン酸が結 合したヌクレオチドです。 A TPase という酵素で加水分解された時、１つのリン 酸が剥がれます。その時に放出されるエネルギー ( ATP1mol あたり 7 .3kcal ) を使 って、筋肉を動かしたり、細胞を分解したり、物質を合成したりとあらゆる生命 活動が行えます。私たちにとってなくてはならない物質なのです。 ここから 次に A TP の生成について説明 します 。 食物から得たエネルギーのうち、最も標準的なグルコースから
+        ATP を生成する 方法で考えます。 食べ物から得たエ ネルギーを A TP に蓄えることを呼吸と言い、２段階の反応が あります。 ( ① 解糖系：グルコース→ピルビン酸：細胞基質内：酸素必要なし ) ( ② T CA 回路：ピルビン酸→二酸化炭素と水：ミトコンドリア o r 原核細胞膜： 酸素が必要 ) 生成 方法は さらに大きく ２つ ずつ あ り ます。 １つ目は、グルコースの反応中間体に A DP とリン酸が直接化合してできる「基 質レベルのリン酸化」 です。 ２つ目は、電子伝達系
+        を利用した 「酸化的リン酸化」 で す 。 呼吸で消費される物質から、酵素の力で水素と電子が取り出され、電子をミトコ ンドリアの内膜の「電子伝達系」まで運 びます ( 原核細胞の場合、 細胞 膜 の内側 ) 。 電子伝達系は電子を受け取ると、膜の内外での電位差を利用して A DP から A T P を 合成します。
+      </p>
+    </div>
+    <div class="space" id="subB"></div>
+    <div class="section2">
+      <h1> kholodenko-Simulation </h1>
+      <h2>2.1 細胞内シグナル伝達</h2>
+      <p>細胞内では、外界の変化を入力として受け入れ、入力に応じた細胞変化が行われている。刺激を受け入れる器官を受容体と呼び、細胞膜の受容体に特定の刺激因子(リガンド)が結合すると、細胞内へ信号を送り細胞質にある様々な酵素を活性化させていく反応をおこす。この一連の流れを細胞内シグナル伝達という。最終的に標的因子が活性化されて入力に応じた細胞応答を起こすのである。つまり、細胞応答は細胞内シグナル伝達によって制御されているのである。
+      </p>
+      <h2>2.2　手法</h2>
+      <p>
+        私たちは細胞内シグナル伝達を数式的な手法で表現することにした。その手法とは化学種Xのモル濃度の時間変化を微分方程式として定式化することである。化学種Xの濃度変化は次式のように定義される。最後に、すべての化学種の微分方程式のそれぞれの関係を計算し、一つ一つの化学種の単位時間あたりの変化量を求める。
+      </p>
+      <h2>2.3 kholodenkoモデル</h2>
+      <p>本研究では、細胞内シグナル伝達系のモデル化の際kholodenkoモデルを基にシミュレーションする。kholodenkoモデルはBorisN.KholodenkoがEGFのシグナル伝達をモデル化したものである。生化学実験のデータと比較して作られたモデルのため非常に信頼の高いモデルである。今回はATPを減少・消失させて、実際にRasたんぱく質をリン酸化させない事が可能かシミュレーションする。 作成した微分方程式を基にオイラー法によって、Rasタンパク質の時間あたりの濃度変化をグラフに表す。
+      </p>
+    </div>
+
+    <div class="space" id="subC"></div>
+    <div class="section1">
+      <h1> e.coli-Simulation </h1>
+    </div>
+  </main>
+  <!--↑変更するのはここまで↑-->
+
+  <footer>
+    <p>&copy;YOKABIO 2018</p>
+  </footer>
+</body>
+
+</html>

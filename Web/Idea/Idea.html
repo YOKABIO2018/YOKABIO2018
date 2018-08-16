@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../common.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <title>YOKABIO2018</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    $(function() {
+      var $win = $(window),
+        $main = $('main'),
+        $nav = $('nav'),
+        navHeight = $nav.outerHeight(),
+        navPos = $nav.offset().top,
+        fixedClass = 'is-fixed';
+
+      $win.on('load scroll', function() {
+        var value = $(this).scrollTop();
+        if (value > navPos) {
+          $nav.addClass(fixedClass);
+          $main.css('margin-top', navHeight);
+        } else {
+          $nav.removeClass(fixedClass);
+          $main.css('margin-top', '0');
+        }
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--↓トップに戻るボタン↓-->
+  <div id="page_top">
+    <i class="fas fa-angle-double-up fa-2x faa-bounce animated-hover top-bottom"></i>
+    <a href="#"></a></div>
+  <!--↑トップに戻るボタン↑-->
+
+  <!--↓変更するのはここから↓-->
+  <!--↓ナビゲーションバー(メイン)↓-->
+  <header>
+    <ul>
+      <!--このファイルのaタグにclass="current"を追加して下さい-->
+      <li><a href="../Home/Home.html">Home</a></li>
+      <li><a class="current" href="../Idea/Idea.html">Idea</a></li>
+      <li><a href="../Simulation/Simulation.html">Simulation</a></li>
+      <li><a href="../DNADesign/DNADesign.html">DNA Design</a></li>
+      <li><a href="../Experiment/Experiment.html">Experiment</a></li>
+      <li><a href="../Discussion/Discussion.html">Discussion</a></li>
+      <li><a href="../Team/Team.html">Team</a></li>
+    </ul>
+  </header>
+  <!--↑ナビゲーションバー(メイン)↑-->
+
+  <!--↓ナビゲーションバー(サブ)↓-->
+  <nav>
+    <ul>
+      <!--hrefをサブタイトルに変更して下さい-->
+      <!--liの数は必要に応じて変更して下さい-->
+      <li><a href="#subA">Background</a></li>
+      <li><a href="#subB">Our Project</a></li>
+      <li><a href="#subC">Goal research</a></li>
+    </ul>
+  </nav>
+  <!--↑ナビゲーションバー(サブ)↑-->
+
+  <main class="container">
+    <!--section1とsection2は交互に書いて下さい-->
+    <!--section1,section2の直前に,
+                <div class="space" id="subX"></div>
+                idはsectionではなく,直前のspaceのクラスに追加して下さい
+                divタグの内部では,h1,h2,pタグのみ使用して下さい
+                img,videoタグを使用するときは,pタグの外で使用して下さい
+            -->
+    <div class="space" id="subA"></div>
+    <div class="section1">
+      <h1>Buckground</h1>
+      <p>近年、技術の進歩により、 DNAを材料とした様々なものづくりが行われています。これらの利点は、ナノスケールで扱える事と、生体適合性の高さから、将来的には生体内で機能 できることが期待できる事です。過去のBIOMODでも、実際に生体内での活躍を考慮した様々な作品が提案されています。 その中でも特に注目を集めているのは、癌細胞に直接で薬を投与することができる、ドラッグデリバリーシステム(DDS)と呼ばれるものです。従来の癌治療には放射線治療や薬物 治療がありますが、これらの問題点は、癌細胞以外の健康な細胞にも影響を与えるため、様々な副作用があらわれることです。一方で、近年開発されている
+        DDSは、癌細胞にピンポイントで薬を投与できるため、副作用が無くなることが期待されています。その研究が成功すれば、癌治療の技術は大きく進展するでしょう。 しかし、DDSはその制御の困難さから、現状では実用できるレベルには達していません（図）。私たちの提案するDNAシステムは、DDS の様に直接細胞への投与を狙います。現在の技術では、先ほど述べた様に、完全に癌細胞だけを対象にするのは難しいでしょう。しかし、 それは薬物治療と違い、健康細胞にはほとんど影響を与えないと考えられます。また、現在実際にDNAを用いたシステムを実際に生体内で動かした例はありません。DNAシステムを生体内内に入れるには様々な課題があり、新しい発想が必要になります。そこで、私たちは、その課題の解決策を考察し、検証実験を行います。さらに、私たちが作成した
+        DNAシステムを、実際に細胞内で機能させることを目標とします.
+        <br>
+    </div>
+
+    <div class="space" id="subB"></div>
+    <div class="section2">
+      <h1>Our Project</h1>
+      <p>
+        私たちは、細胞の生命活動のためのエネルギーである ATP （アデノシン３リン酸）の供 給を絶つためのシステムを提案します。 ATP はミトコンドリアで合成されますが、ミトコ ンドリアが異常をきたした時、細胞は解糖系と呼ばれるシステムで ATP を合成します（図）。 解糖系とは、グルコースをピルビン酸に分解するまでの反応ルートです。その後、酸素があ る場合はミトコンドリアで多くの ATP を合成します。酸素がない場合でも少量の A TP を 合成することはできますが、同時に乳酸が生成されます。ここで、ミトコンドリアが機能不
+        全の場合、酸素の有無に関係無く常に少量の ATP と同時に乳酸を生成し続けます。乳酸を 出し続けることで細胞は弱り死に至りますが、稀にその状態でも糖質を餌にして生き続け る細胞が現れます。それが癌細胞です。 癌細胞は糖質から得られる少量の ATP をエネルギーとして生き続けます。そこで、私た ちはその少量の ATP の供給を一度完全にシャットダウンすることで 細胞内シグナル伝達 が 止まり、強制的に細胞死へ向かわせることが出来ると考えました
+      </p>
+    </div>
+
+  </main>
+  <!--↑変更するのはここまで↑-->
+
+  <footer>
+    <p>&copy;YOKABIO 2018</p>
+  </footer>
+</body>
+
+</html>
